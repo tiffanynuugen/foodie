@@ -7,15 +7,14 @@ require 'faker'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-50 times.each do
-Restaurant.create
 
-Faker::Restaurant.name          #=> "Curry King"
-
-Faker::Restaurant.type          #=> "Comfort Food"
-
-Faker::Restaurant.description   #=> "We are committed to using the finest ingredients in our recipes. No food leaves our kitchen that we ourselves would not eat."
-
-Faker::Restaurant.review
+20.times do
+Restaurant.create([{
+name: Faker::Restaurant.name,
+address: Faker::Address.street_name,
+# type: Faker::Restaurant.type,
+phone_number: Faker::PhoneNumber.cell_phone,
+description: Faker::Restaurant.description,   #=> "We are committed to using the finest ingredients in our recipes. No food leaves our kitchen that we ourselves would not eat."
+review: Faker::Restaurant.review}])
 
 end
