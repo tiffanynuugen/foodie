@@ -1,3 +1,3 @@
 class MenuItemsController < ApplicationController
-
+  
 end

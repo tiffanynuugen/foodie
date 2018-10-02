@@ -11,6 +11,7 @@ require 'faker'
 30.times do
 Restaurant.create([{
 name: Faker::Restaurant.name,
+menu_item: Faker::Food.dish
 address: Faker::Address.street_name,
 # type: Faker::Restaurant.type,
 phone_number: Faker::PhoneNumber.phone_number,
